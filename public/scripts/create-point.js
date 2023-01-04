@@ -64,8 +64,11 @@ function handleSelectedItem(event) {
 
   const itemId = event.target.dataset.id
 
-  //verify for selected items and take the selected items
-  
+  // console.log('ITEM ID', itemId)
+
+  // verify for selected items and take the selected items
+  // if is selected, take the selected items
+
   const alreadySelected = selectedItems.findIndex( item => {
     const itemFound = item === itemId; // it's going to be true or false
     return itemFound;
@@ -83,6 +86,9 @@ function handleSelectedItem(event) {
     // if is not selected add selected item
     selectedItems.push( itemId );
   }
+
+  // console.log('selectedItems: ', selectedItems); 
+
   // update hidden input with selected item
   collectedItems.value = selectedItems;
 }
